@@ -1,8 +1,10 @@
-import Head from 'next/head'
-import {BsFillMoonStarsFill} from 'react-icons/bs'
-import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
+import Head from 'next/head';
+import {BsFillMoonStarsFill} from 'react-icons/bs';
+import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
+import {useState} from 'react';
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <>
       <Head>
@@ -11,29 +13,72 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-white px-10">
+      <main className="bg-gray-50 px-10 py-5">
         <section className="min-h-screen">
           <nav className="p-10 mb-12 flex justify-between">
-            <h1 className="text-xl">developedByNev</h1>
+            <h1 className="text-xl text-gray-800">Hi mom!</h1>
             <ul className="flex items-center"> 
               <li>
                 <BsFillMoonStarsFill className=' cursor-pointer text-xl'/>
                 </li>
               <li><a className=" bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md ml-8" href="#">Resume</a></li>
+              
             </ul>
           </nav>
 
-          <div className=" text-center p-10">
+          <div className=" text-center p-5">
             <h2 className=" text-5xl py-2 text-teal-600 font-medium">Nevan Samadhana</h2>
-            <h3>Developer and Designer</h3>
-            <p>Software developer currently in Seattle, Wa. Loves Basketball and cooking</p>
+            <h3 className=" text-2xl py-2 text-gray-800">Developer and Designer</h3>
+            <p className=" text-lg text-gray-800 leading-8">Currently in Seattle, Wa. Love all things basketball and cooking.</p>
           </div>
 
-          <div>
-          <a href="https://www.linkedin.com/in/nsamadhana/"><AiFillLinkedin /></a>
-          <a href="https://github.com/nsamadhana"><AiFillGithub /></a>
+          <div id="profilePhoto" className=" relative mx-auto justify-center flex h-96 w-96">
+            <img src="../nevan.jpg" alt="" />
+            
+          </div>
+           
+          <div className=" py-5 text-5xl flex justify-center gap-10 text-teal-600">
+            <a href="https://www.linkedin.com/in/nsamadhana/"><AiFillLinkedin /></a>
+            <a href="https://github.com/nsamadhana"><AiFillGithub /></a>
           </div>
 
+          <section>
+            <div className = "py-1">
+              <h1 className="text-4xl text-teal-600">Previous Experience</h1>
+              <p className="text-gray-800 text-lg"> From startup to big tech, I've been very fortunate to contribute to a number of organizations.</p>
+            </div>
+
+            
+            <div className="shadow-lg p-10 rounded-xl my-10" id ="logo1">
+              <img src="../Microsoft.png" alt="" />
+              <h3 className="flex text-4xl text-teal-600">Microsoft</h3>
+              <p className="text-gray-800 text-lg">After graduating from college I leveraged my security clearance to work on Air Gapped Clouds.</p>
+              <p className="text-gray-800 text-lg">I am now working in Azure IoT with <a className = "text-teal-600"href="https://azure.microsoft.com/en-us/products/digital-twins/?&ef_id=CjwKCAiA76-dBhByEiwAA0_s9dCahQcpvixXgpSNpodMlSa12cDOS-CbeF61s69bSlL5In3UjIAFixoCoMYQAvD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_CjwKCAiA76-dBhByEiwAA0_s9dCahQcpvixXgpSNpodMlSa12cDOS-CbeF61s69bSlL5In3UjIAFixoCoMYQAvD_BwE:G:s&gclid=CjwKCAiA76-dBhByEiwAA0_s9dCahQcpvixXgpSNpodMlSa12cDOS-CbeF61s69bSlL5In3UjIAFixoCoMYQAvD_BwE#features">Azure Digital Twins</a> under the models and engineering systems team.</p>
+            </div>
+
+            <div className="shadow-lg p-10 rounded-xl my-10" id ="logo2">
+              <img src="../amazon.png" alt="" />
+              <h3 className="flex text-4xl text-center text-teal-600">Amazon</h3>
+              <p className="text-gray-800 text-lg">At AWS I worked on the <a className="text-teal-600" href="https://aws.amazon.com/gamelift/">GameLift team</a>, developing the capability for customers like Ubisoft to look into individual server metrics like CPU usage or disk space.</p>
+              <p className="text-gray-800 text-lg">This kind of functionality provides insight at a more granular level.</p> 
+            </div>
+
+            <div className="shadow-lg p-10 rounded-xl my-10" id ="logo3">
+              <img src="../Northrop-Grumman.png" alt="" />
+              <h3 className="flex text-4xl text-teal-600">Northrop Grumman</h3>
+              <p className="text-gray-800 text-lg">At Northrop Grumman I worked on simulation software for the autonomous  <a className="text-teal-600" href="https://www.northropgrumman.com/what-we-do/air/fire-scout/">FireScout Helicoptor</a>.</p>
+              <p className="text-gray-800 text-lg">I developed an X-Plane 11 plugin that parses DIS packets to render external entities for a more realistic training experience.</p>
+            </div>
+
+            <div className="shadow-lg p-10 rounded-xl my-10" id ="logo3">
+              <img src="../arc.png" alt="" />
+              <h3 className="flex text-4xl text-teal-600">Additive Rocket Corporation</h3>
+              <p className="text-gray-800 text-lg">This startup 3-D prints rocket components out of a lab at UC San Diego.</p>
+              <p className="text-gray-800 text-lg">I began my career here writing scripts to automate repetitive tasks.</p>
+            </div>
+
+
+          </section>
         </section>
       </main>
     </>

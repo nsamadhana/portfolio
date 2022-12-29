@@ -103,3 +103,28 @@ a {
   text-decoration: none;
 }
 
+#profilePhoto img {
+  border-radius:50%;
+  border:2px;
+  box-shadow:#0885ff33;
+}
+
+#logo1 img{ 
+  width: 100px; 
+  height:auto;
+}
+
+#logo2 img{ 
+  width: 150px; 
+  height:auto;
+}
+
+#logo3 img{ 
+  width: 175px; 
+  height:auto;
+}
+
+#logo4 img{ 
+  width: 175px; 
+  height:auto;
+}
